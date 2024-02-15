@@ -20,5 +20,6 @@ public class Reclamation {
     private Date dateSoumission;
     private Date dateMiseAJour;
     private Long utilisateurTraitantId;
-
+    @ManyToOne
+    Projet projet;
 }

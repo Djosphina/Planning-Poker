@@ -26,6 +26,7 @@ public class Projet {
     private float budget;
     private int status  ;
     private ALGORITHME algo;
+
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Carte> cartes;
 

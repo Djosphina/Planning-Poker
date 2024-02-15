@@ -20,7 +20,8 @@ public class Ticket implements Serializable {
 
     private String self;
     private String key;
-
+    @ManyToOne
+    Sprint sprint;
     @Embedded
     private Fields fields;
 

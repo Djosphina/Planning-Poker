@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -31,6 +32,8 @@ public class User implements Serializable {
     private Role role;
     private String image;
 
+    @ManyToMany(cascade = {CascadeType.ALL})
+    private Set<Equipe> equipes;
 
 
 
