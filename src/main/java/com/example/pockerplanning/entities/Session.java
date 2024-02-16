@@ -19,9 +19,8 @@ public class Session {
     private Date start_date;
     private String estimation;
 
-    @OneToOne
-    private Chat chat;
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="session")
+    private List<Chat> Chats;
    // @OneToOne
     //private Historique historique;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="session")

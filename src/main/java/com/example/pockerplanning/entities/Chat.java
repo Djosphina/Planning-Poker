@@ -19,8 +19,8 @@ public class Chat {
     private String name;
     private boolean isActive;
 
-    @OneToOne(mappedBy="chat")
-    private Session session;
+    @ManyToOne
+    Session session;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy="chat")
     private List<Message> Messages;
