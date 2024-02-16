@@ -1,12 +1,10 @@
 package com.example.pockerplanning.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,4 +18,15 @@ public class Session {
     private int id;
     private Date start_date;
     private String estimation;
+
+    @OneToOne
+    private Chat chat;
+
+   // @OneToOne
+    //private Historique historique;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="session")
+    private List<Ticket> Tickets;
+
+
+
 }

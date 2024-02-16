@@ -1,10 +1,9 @@
 package com.example.pockerplanning.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -19,5 +18,12 @@ public class Chat {
     private int id;
     private String name;
     private boolean isActive;
+
+    @OneToOne(mappedBy="chat")
+    private Session session;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="chat")
+    private List<Message> Messages;
+
 
 }

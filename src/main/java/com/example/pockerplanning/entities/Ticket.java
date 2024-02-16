@@ -22,6 +22,8 @@ public class Ticket implements Serializable {
     private String key;
     @ManyToOne
     Sprint sprint;
+    @ManyToOne
+    Session session;
     @Embedded
     private Fields fields;
 
@@ -34,6 +36,7 @@ public class Ticket implements Serializable {
         this.fields = fields;
     }
 */
+
     @Embeddable
     @Data
     public static class Fields {

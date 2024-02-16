@@ -23,11 +23,10 @@ public class Analyse implements Serializable {
     private String Description;
     private Date date_analyse;
     @OneToOne
-    private Sprint sprint;
+    private Ticket ticket   ;
     @OneToOne
     private Projet projet;
-    @OneToOne
-    private Session session;
+
 
 
     // Ticket ticket;
