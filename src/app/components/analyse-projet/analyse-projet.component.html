@@ -1,0 +1,22 @@
+<app-analyse></app-analyse>
+<div class="col-lg-6" *ngFor="let analyse of listAnalyse; let i=index">
+
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">{{ analyse.projet.titre }}</h4>
+      <ul class="list-inline text-end">
+        <li class="list-inline-item">
+          <h5><i class="fa fa-circle me-1 text-info"></i>{{ analyse.description }}</h5>
+        </li>
+        <li class="list-inline-item">
+          <h5><i class="fa fa-circle me-1 text-cyan"></i>{{ analyse.id }}</h5>
+        </li>
+        <li class="list-inline-item">
+          <h5><i class="fa fa-circle me-1 text-cyan"></i>{{ analyse.ticket.id }}</h5>
+        </li>
+      </ul>
+      <div id="morris-area-chart"></div>
+    </div>
+  </div>
+</div>
+

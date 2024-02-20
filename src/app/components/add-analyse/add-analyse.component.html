@@ -1,0 +1,35 @@
+<p>add-analyse works!</p>
+<h1> AddProduct </h1>
+
+<form class="form-control" [formGroup]="addanalyse" (ngSubmit)="Add()">
+  <div>
+    <label>Description:</label>
+    <input type="text" formControlName="description" placeholder="Description">
+    <div *ngIf="addanalyse.controls['description'].touched">
+      <div class="alert alert-danger" *ngIf="addanalyse.controls['description'].hasError('required')">
+        Description is a required field
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label>Date Analyse:</label>
+    <input type="date" formControlName="date_analyse">
+    <!-- Ajoutez des validateurs si nécessaire -->
+  </div>
+  <div>
+    <label>Projet:</label>
+    <select formControlName="projet" class="form-control" required>
+      <option *ngFor="let projet of listeProjets" [value]="projet.id">{{ projet.titre }}</option>
+    </select>
+    <div *ngIf="addanalyse.controls['projet'].touched">
+      <div class="alert alert-danger" *ngIf="addanalyse.controls['projet'].hasError('required')">
+        Projet is a required field
+      </div>
+    </div>
+  </div>
+
+
+
+  <button class="btn btn-info" type="submit" >Submit</button>
+</form>
