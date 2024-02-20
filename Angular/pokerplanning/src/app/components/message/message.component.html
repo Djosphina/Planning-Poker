@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Freedash Template - The Ultimate Multipurpose admin template</title>
+    <!-- This page css -->
+    <!-- Custom CSS -->
+    <link href="/assets/dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-7 align-self-center">
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Chat</h4>
+                </div>
+                <div class="col-5 align-self-center">
+                    <div class="customize-input float-end">
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search" placeholder="Search" aria-label="Search">
+                                    </div>                       
+                                </form>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-lg-9  col-xl-12">
+                                <div class="chat-box scrollable position-relative"
+                                    style="height: calc(100vh - 111px);">
+                                    <!--chat Row -->
+                                    <ul class="chat-list list-style-none px-3 pt-3">
+                                        <!--chat Row -->
+                                        <li class="chat-item list-style-none mt-3">
+                                            <div class="chat-img d-inline-block"><img
+                                                    src="../assets/images/users/1.jpg" alt="user"
+                                                    class="rounded-circle" width="45">
+                                            </div>
+                                            <div class="chat-content d-inline-block ps-3">
+                                                <h6 class="font-weight-medium">James Anderson</h6>
+                                                <div class="msg p-2 d-inline-block mb-1">Lorem
+                                                    Ipsum is simply
+                                                    dummy text of the
+                                                    printing &amp; type setting industry.</div>
+                                            </div>
+                                            <div class="chat-time d-block font-10 mt-1 mr-0 mb-3">10:56 am
+                                            </div>
+                                        </li>
+                                        <!--chat Row -->
+                                        <li class="chat-item odd list-style-none mt-3">
+                                            <div class="chat-content text-end d-inline-block ps-3">
+                                                <div class="box msg p-2 d-inline-block mb-1">I
+                                                    would love to
+                                                    join the team.</div>
+                                                <br>
+                                            </div>
+                                        </li>
+                                        <!--chat Row -->
+                                        <li class="chat-item odd list-style-none mt-3">
+                                            <div class="chat-content text-end d-inline-block ps-3">
+                                                <div class="box msg p-2 d-inline-block mb-1 box">
+                                                    Whats budget
+                                                    of the new project.</div>
+                                                <br>
+                                            </div>
+                                            <div class="chat-time text-end d-block font-10 mt-1 mr-0 mb-3">
+                                                10:59 am</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body border-top">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="input-field mt-0 mb-0">
+                                                <input id="textarea1" placeholder="Type and enter"
+                                                    class="form-control border-0" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="btn-circle bg-cyan float-end text-white d-flex align-items-center justify-content-center"
+                                                href="javascript:void(0)"><i class="fas fa-paper-plane"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+
+
+        <div id="username-page">
+            <div class="username-page-container">
+                <h1 class="title">Type your username to enter the Chatroom</h1>
+                <form id="usernameForm" name="usernameForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="accent username-submit">Start Chatting</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="chat-page" class="hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Spring WebSocket Chat </h2>
+                </div>
+                <div class="connecting">
+                    Connecting...
+                </div>
+                <ul id="messageArea">
+        
+                </ul>
+                <form id="messageForm" name="messageForm">
+                    <div class="form-group">
+                        <div class="input-group clearfix">
+                            <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                            <button type="submit" class="primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            All Rights Reserved by Freedash. Designed and Developed by <a
+                href="https://wrappixel.com">WrapPixel</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <script>
+        $(function () {
+            $(document).on('keypress', "#textarea1", function (e) {
+                if (e.keyCode == 13) {
+                    var id = $(this).attr("data-user-id");
+                    var msg = $(this).val();
+                    msg = msg_sent(msg);
+                    $("#someDiv").append(msg);
+                    $(this).val("");
+                    $(this).focus();
+                }
+            });
+        });
+    </script>      
+      
+    <!-- ============================================================== -->
+    <!-- Chat Message -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/main.js"></script>
+    <!-- Chat Message -->
+    <!-- ============================================================== -->
+
+</body>
+
+</html>
