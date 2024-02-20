@@ -8,6 +8,8 @@ import java.util.List;
 public interface IAnalyseService {
     Analyse ajouterAnalyse(Analyse analyse);
     List<Analyse> afficherAnalyse();
+    List<Analyse> afficherAnalyse_projet();
+    List<Analyse> afficherAnalyse_Us();
     Analyse afficher_one_Analyse(int id);
     void deleteAnalyse(int id);
     Analyse updateAnalyse(Analyse e, int id_analyse);

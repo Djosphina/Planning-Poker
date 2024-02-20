@@ -15,4 +15,10 @@ public interface AnalyseRepository  extends JpaRepository<Analyse, Integer> {
     @Query("Select a from Analyse a order by a.ticket.sprint.createdDate")
     List<Analyse> getAnalyseparsprint();
 
+    @Query("Select a from Analyse a where  a.ticket =null ")
+    List<Analyse> getAnalys_projet();
+
+    @Query("Select a from Analyse a where  a.projet =null ")
+    List<Analyse> getAnalys_Us();
+
 }

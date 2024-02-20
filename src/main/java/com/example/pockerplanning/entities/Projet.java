@@ -1,5 +1,6 @@
 package com.example.pockerplanning.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,13 +27,13 @@ public class Projet {
     private float budget;
     private int status  ;
     private ALGORITHME algo;
-
+@JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Carte> cartes;
-
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy="projet")
     private List<Sprint> Sprints;
-
+    @JsonIgnore
     @ManyToOne
     Equipe equipe;
 

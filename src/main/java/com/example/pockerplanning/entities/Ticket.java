@@ -17,7 +17,6 @@ public class Ticket implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idticket")
     private Long Id;
-
     private String self;
     private String key;
     @ManyToOne

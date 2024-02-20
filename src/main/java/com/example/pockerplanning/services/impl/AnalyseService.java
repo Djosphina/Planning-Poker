@@ -23,6 +23,16 @@ public class AnalyseService implements IAnalyseService {
     }
 
     @Override
+    public List<Analyse> afficherAnalyse_projet() {
+        return analyseRepository.getAnalys_projet();
+    }
+
+    @Override
+    public List<Analyse> afficherAnalyse_Us() {
+        return analyseRepository.getAnalys_Us();
+    }
+
+    @Override
     public Analyse afficher_one_Analyse(int id) {
         return analyseRepository.findById(id).orElse(null);
     }

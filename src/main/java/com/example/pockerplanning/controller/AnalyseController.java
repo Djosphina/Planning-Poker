@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class AnalyseController {
 
     @Autowired
@@ -21,6 +22,19 @@ public class AnalyseController {
         List<Analyse> listAnalyse = analyseService.afficherAnalyse();
         return listAnalyse;
     }
+    @GetMapping("/getAnalyses_par_projets")
+    @ResponseBody
+    public List<Analyse> getAnalyses_par_projets() {
+        List<Analyse> listAnalyse = analyseService.afficherAnalyse_projet();
+        return listAnalyse;
+    }
+    @GetMapping("/getAnalyses_par_us")
+    @ResponseBody
+    public List<Analyse> getAnalyses_par_Us() {
+        List<Analyse> listAnalyse = analyseService.afficherAnalyse_Us();
+        return listAnalyse;
+    }
+
     // http://localhost:8088/Spring/etudiant/retrieve-etudiant/8
     @GetMapping("/retrieve-Analyse/{Analyse-id}")
     @ResponseBody
