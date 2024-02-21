@@ -20,12 +20,19 @@ addanalyse!:FormGroup;
 
       description: ['', Validators.required],  // Ajoutez des validateurs si nécessaire
         date_analyse: ['', Validators.required],
-      projet: ['', Validators.required],
+        projet: ['', Validators.required],
      // ticket: ['', Validators.required]
     });
   }
-  Add(){this.AS.AjouterAnalyse(this.addanalyse.value).
-  subscribe(()=>{alert("adde Success")
+  Add(){
+    let Analyse={
+
+      "date_analyse": this.addanalyse.value.date_analyse,
+        "description": this.addanalyse.value.description
+    }
     console.log(this.addanalyse.value);
+    this.AS.AjouterAnalyse(Analyse,this.addanalyse.value.projet).
+  subscribe(()=>{alert("adde Success")
+
   })}
 }

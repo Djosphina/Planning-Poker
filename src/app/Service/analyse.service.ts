@@ -23,14 +23,15 @@ return this.http.get<Analyse[]>(this.url+'/retrieve-all-Analyses', { headers })
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     });
-    return this.http.get<Analyse[]>(
-      "http://localhost:8090/Pocker/getAnalyses_par_projets")
+    return this.http.get<Analyse[]>("http://localhost:8090/Pocker/getAnalyses_par_projets")
   };
 
-  AjouterAnalyse(analyse: Analyse): Observable<any> {
-
-    return this.http.post(this.url+'/add-Analyse', analyse);
+  AjouterAnalyse(analyse: any,id:any): Observable<any> {
+    return this.http.post(`${this.url}/add-Analyse/${id}`, analyse);
+   // return this.http.post(this.url+'/add-Analyse/${id}', analyse);
   }
+
+
   getAnalyse_par_Us():Observable<Analyse[]>{
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

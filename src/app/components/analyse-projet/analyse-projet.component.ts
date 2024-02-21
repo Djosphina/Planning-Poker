@@ -19,7 +19,7 @@ export class AnalyseProjetComponent {
   );}*/
   ngOnInit() {
     this.AS.getAnalyse_par_projet().subscribe(data => {
-      console.log('Données récupérées1:', data);
+      console.log('Données récupérées2:', data);
       this.listAnalyse = data;
     }, error => {
       console.error('Erreur lors de la récupération des données:', error);
