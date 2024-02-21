@@ -1,0 +1,71 @@
+
+<div id="poker-estimation">
+  <div class="head-container">
+    <div>
+      <h3>ESTIMATE</h3>
+      <p>Welcome to your Estimation session</p>
+
+    </div>
+  </div>
+  <div id="poker-container">
+      <aside id="work-item-list">
+          <h3>User Story</h3>
+          <span class="divider"></span>
+          <div class="items">
+            <row  [workItems]="TicketList" (IdTickets)="handleIdTicket($event)"   (voteStarted)="onVoteStarted()"></row>
+
+          </div>
+      </aside>
+      <section id="poker">
+
+
+          <div class="cards-container">
+            <card *ngFor="let card of cards"   (cardSelected)="onCardSelected($event)" [card]="card" [votingStarted]="votingStarted"></card>
+          </div>
+      </section>
+
+    <aside id="estimation">
+      <!-- <h3>Team</h3> -->
+
+      <span class="divider"></span>
+      <br>
+
+
+
+      <div id="poker-estimation">
+        <!-- Your existing HTML code here -->
+
+        <!-- Chronometer -->
+        <div class="chronometer">
+          <!-- Display your chronometer here -->
+          <!-- Example: -->
+          <h4>Timer: {{ minutes }} : {{ seconds }}</h4>
+        </div>
+      </div>
+<br>
+<button   (click)="close()" class="btn btn-info">End Vote </button>
+<br>
+        <div class="players">
+          <h4>Players</h4>
+          <participant [participant]="participants"  [selectedCard]="selectedCard"  ></participant>
+          <div id="add-participant-btn"><img src="../assets/add-icon.svg"> Add another player</div>
+        </div>
+
+<br>
+<button id="commit-estimate" (click)="commit()" >Commit</button>
+    </aside>
+
+  </div>
+
+<br>
+<br>
+</div>
+
+
+<!-- <div  *ngIf="ViewChart">
+<h1>Chart</h1>
+
+<vote-chart  (IdTickets)="onIdTicketReceived($event)">   </vote-chart>
+
+</div> -->
+

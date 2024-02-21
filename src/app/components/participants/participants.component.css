@@ -1,0 +1,54 @@
+.participants-container{
+  display:flex;
+  flex-direction:column;
+  margin:0;
+  padding:0;
+
+}
+.participant{
+  display:flex;
+  width:auto;
+  align-items: center;
+  flex-direction:row;
+  padding:10px 12px;
+  box-sizing:border-box;
+  max-height: 60px;
+}
+.you .name, .you .timing {
+  color: #333;
+}
+
+.name{
+  margin-left:10px;
+  align-self:center;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color:#888888;
+}
+.timing{
+  margin-left:10px;
+  color:#888888
+}
+.waiting-icon{
+  height:20px;
+  width:20px;
+}
+.selected-default.chosen{
+  background: #5f76e8;
+  color:#fff;
+}
+.selected-default{
+  background: #fff;
+  color:#8CCBEA;
+  height: 41px;
+  width: 33px;
+  border: 1px solid #5f76e8;
+  display:flex;
+  align-content: center;
+  align-items:center;
+  justify-content: center;
+  align-self: flex-end;
+  margin-left:auto;
+}
+

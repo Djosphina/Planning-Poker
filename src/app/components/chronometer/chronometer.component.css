@@ -1,0 +1,17 @@
+/* chronometer.component.css */
+.card {
+  border: 2px solid #5f76e8;
+  border-radius: 5px;
+}
+
+.card-header {
+  background-color: #5f76e8;
+  color: #fff;
+}
+
+.chronometer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Optional: Add more styling as needed */

@@ -1,0 +1,181 @@
+
+.items{
+  width:100%;
+}
+
+
+.cards-container{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+
+}
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+a {
+  color: #8CCBEA;
+  text-decoration: none;
+  line-height: 19px;
+  text-decoration: underline;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+}
+/*buttons*/
+
+.buttons-container {
+  display: flex;
+}
+#add-participant-btn {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  line-height: 19px;
+  color: #8CCBEA;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+#add-participant-btn img {
+  margin-right: 10px;
+}
+#copy-link {
+  max-width: 212px;
+  color: #333;
+  justify-content: center;
+}
+#copy-link img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+#save-estimate {
+  width: 104px;
+  margin-left: auto;
+  color: #fff;
+  background-color: #5f76e8;
+}
+#reveal,
+#commit-estimate {
+  width: 212px;
+  margin: 30px 50px;
+  align-self: center;
+}
+#reveal {
+  margin: 0 50px 30px;
+  text-transform: uppercase;
+}
+#poker-estimation {
+  max-width: 1360px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+#poker-container {
+  display: flex;
+  width: 100%;
+}
+#poker {
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  width: 666px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.head-container h3 {
+  padding: 0;
+  margin: 0;
+}
+#poker title {
+  margin: 0 20px;
+}
+#estimation,
+#poker,
+#work-item-list {
+  border: 1px solid #e5e5e5;
+  margin: 0 12px 0;
+  box-sizing: border-box;
+}
+
+#work-item-list {
+  width: 330px;
+  border-radius: 5px 5px 0 0;
+  margin-left: 0;
+}
+
+#estimation {
+  display: flex;
+  flex-direction: column;
+  width: 316px;
+  margin-right: 0;
+}
+#estimation h3,
+#work-item-list h3 {
+  margin: 0;
+  padding: 13px 20px;
+  font-size: 18px;
+  color: #333;
+  line-height: 24px;
+}
+#estimation h4 {
+  margin: 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-family: SegoeUI-Semilight, 'WeblySleek UI Semilight', Helvetica, Arial,
+    sans-serif;
+  color: #888;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 200;
+}
+.players {
+  background-color: rgba(151, 151, 151, 0.1);
+}
+.head-container {
+  margin: 12px 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  padding: 20px 30px;
+}
+
+/*buttons*/
+.button,
+button {
+  all: unset;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  border: 1px solid #5f76e8;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: #5f76e8;
+  font-family: 'Segoe UI';
+  font-size: 16px;
+  line-height: 21px;
+  padding: 1px;
+}
+
+
+
+
+.chronometer {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.chronometer h4 {
+  margin-right: 10px; /* Add some spacing between the text and the timer */
+}

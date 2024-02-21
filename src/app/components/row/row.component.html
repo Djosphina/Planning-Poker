@@ -1,0 +1,11 @@
+<div class="poker-row" *ngFor="let tickets of workItems">
+  <div class="id-and-name">
+    <p>{{ tickets.key}}</p>
+    <span>{{ tickets.self }}</span>
+  </div>
+
+    <a (click)="us(tickets)" style="width: 134px;" class="btn btn-info">Begin Vote</a>
+
+  <!-- <img class="icon-check" src="assets/check.svg" *ngIf="tickets.isEstimated"> -->
+</div>
+<span class="divider"></span>

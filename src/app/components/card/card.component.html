@@ -1,0 +1,19 @@
+<div class="card" [class.disabled]="!votingStarted" >
+  <div  (click)="selectCard(card)" [style.pointer-events]="votingStarted ? 'auto' : 'none'">
+    <span *ngIf="!cardType(card)">{{card}}</span>
+    <svg class="waiting-card" *ngIf="cardType(card)" width="59px" height="41px" viewBox="0 0 59 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Poker-Planning" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <g id="Pokcer-Planning" transform="translate(-704.000000, -997.000000)" stroke="#000" stroke-width="3.24">
+              <g id="Group-36" transform="translate(666.000000, 936.000000)">
+                  <g id="Group-7-Copy-3" transform="translate(40.478994, 62.700487)">
+                      <path d="M41.4560734,19.6833159 L41.4560734,0 L5.65310092,0 L5.65310092,19.6833159 C5.65310092,29.4734223 13.7106541,37.4920302 23.5545872,37.4920302 C33.3947515,37.4920302 41.4560734,29.4734223 41.4560734,19.6833159 Z" id="Stroke-1"></path>
+                      <path d="M41.4560734,18.7460151 L47.1091743,18.7460151 C51.4827901,18.7460151 54.6466422,14.6584465 54.6466422,10.3103083 C54.6466422,5.9565463 51.4827901,1.87460151 47.1091743,1.87460151 L41.4560734,1.87460151" id="Stroke-3"></path>
+                      <path d="M0,37.4920302 L54.6466422,37.4920302" id="Stroke-5"></path>
+                  </g>
+              </g>
+          </g>
+      </g>
+  </svg>
+  </div>
+</div>
+

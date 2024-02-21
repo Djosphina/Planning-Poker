@@ -1,0 +1,18 @@
+.pbi-name{
+  margin:0 20px;
+  font-weight: 600;
+  font-size:22;
+  line-height:30px;
+
+}
+.pbi-id{
+  margin-top:15px;
+  margin:0 20px;
+  font-size:14px;
+
+}
+.pbi-link {
+  float:right;
+  font-size: 14px;
+  margin:0 20px;
+}

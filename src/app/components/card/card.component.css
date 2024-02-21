@@ -1,0 +1,59 @@
+
+.card {
+  margin: 12px;
+  transition: linear all 0.3s;
+  user-select: none;
+  list-style-type:none;
+  height: 166px;
+  width: 134px;
+}
+.card div:hover{
+  color:#5f76e8;
+  background-color:rgba(255, 88, 0,.10)
+}
+.card div:hover g{
+  stroke:#5f76e8;
+}
+.card svg{
+  height:38px;
+  width:40px;
+}
+.card div{
+  font-weight: 500;
+  height:100%;
+  width:100%;
+  position:relative;
+  border-radius: 6.1px;
+  display:Flex;
+  align-items: center;
+  justify-content:center;
+  font-size: 48.6px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2.02px solid #E5E5E5;
+  color: #333;
+  transition: linear all 0.3s;
+  user-select: none;
+}
+.card div g{
+  stroke:#000;
+  transition: linear all 0.2s;
+
+}
+
+.card div:after{
+  position:absolute;
+  display:block;
+  content:"";
+  height:6px;
+  width:calc(100% + 4px);
+  border-radius: 0 0 6.1px 6.1px;
+  z-index:99;
+  bottom:-2px;
+  background:#5f76e8;
+
+}
+.card.disabled {
+  opacity: 0.5;
+}
