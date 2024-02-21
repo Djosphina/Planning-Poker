@@ -23,10 +23,9 @@ public class Analyse implements Serializable {
     private int id;
     private String Description;
     private Date date_analyse;
-@JsonIgnore
     @OneToOne
     private Ticket ticket   ;
-@JsonIgnore
+
     @OneToOne
     private Projet projet;
 

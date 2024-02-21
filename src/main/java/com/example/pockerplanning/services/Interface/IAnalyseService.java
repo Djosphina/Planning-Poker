@@ -6,7 +6,7 @@ import com.example.pockerplanning.entities.Analyse;
 import java.util.List;
 
 public interface IAnalyseService {
-    Analyse ajouterAnalyse(Analyse analyse);
+    Analyse ajouterAnalyse(Analyse analyse,int id_projet);
     List<Analyse> afficherAnalyse();
     List<Analyse> afficherAnalyse_projet();
     List<Analyse> afficherAnalyse_Us();

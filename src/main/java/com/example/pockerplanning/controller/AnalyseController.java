@@ -47,11 +47,11 @@ public class AnalyseController {
     }
 
     // http://localhost:8088/Spring/etudiant/add-etudiant
-    @PostMapping("/add-Analyse")
+    @PostMapping("/add-Analyse/{id_projet}")
     @ResponseBody
-    public Analyse addAnalyse(@RequestBody Analyse ae)
+    public Analyse addAnalyse(@RequestBody Analyse ae,@PathVariable("id_projet") int id_projet)
     {
-        Analyse analyse = analyseService.ajouterAnalyse(ae);
+        Analyse analyse = analyseService.ajouterAnalyse(ae,id_projet);
         return analyse;
     }
 

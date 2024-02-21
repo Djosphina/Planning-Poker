@@ -1,7 +1,9 @@
 package com.example.pockerplanning.services.impl;
 
 import com.example.pockerplanning.entities.Analyse;
+import com.example.pockerplanning.entities.Projet;
 import com.example.pockerplanning.repository.AnalyseRepository;
+import com.example.pockerplanning.repository.ProjetReposiroty;
 import com.example.pockerplanning.services.Interface.IAnalyseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,12 @@ public class AnalyseService implements IAnalyseService {
 
     @Autowired
     AnalyseRepository analyseRepository;
+    @Autowired
+    ProjetReposiroty projetReposiroty;
     @Override
-    public Analyse ajouterAnalyse(Analyse analyse) {
+    public Analyse ajouterAnalyse(Analyse analyse,int id_projet) {
+           Projet p= projetReposiroty.findById(id_projet).orElse(null);
+       analyse.setProjet(p);
         return analyseRepository.save(analyse);
     }
 
