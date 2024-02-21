@@ -1,9 +1,11 @@
 package com.example.pockerplanning.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -78,4 +80,18 @@ public class Ticket implements Serializable {
         @Column(name = "reporter_name") // Unique column name for Reporter name
         private String name;
     }
+    @ManyToOne
+    @JoinColumn(name="session_id")
+    private Session session ;
+
+
+
+    @OneToMany( mappedBy="ticket")
+    @JsonIgnore
+    private List<Vote> voteList ;
+
+
+
+
+
 }

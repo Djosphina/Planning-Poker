@@ -9,16 +9,19 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class Chat {
-
+public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    private boolean isActive;
+
+    private Long Id;
+
+    private String estimation ;
+
+    @ManyToOne
+    @JoinColumn(name="ticket_id")
+    private Ticket ticket ;
 
     @ManyToOne
     @JoinColumn(name="session_id")
-    private Session sessionC ;
-
+    private Session sessionV ;
 }
