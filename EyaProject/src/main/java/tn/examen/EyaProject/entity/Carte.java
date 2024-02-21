@@ -1,5 +1,6 @@
 package tn.examen.EyaProject.entity;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Carte {
 
     @Id
@@ -20,10 +22,12 @@ public class Carte {
     private String valeur;
     private String img;
 
-    @ManyToMany(mappedBy = "projets")
-    private List<Carte> algorithmes;
+    @ManyToMany(mappedBy = "cartes")
+    private List<Algorithme> algorithmes;
 
 
+
+    /*
     public boolean equals(final Object o) {
         if (o == this) {
             return true;
@@ -62,16 +66,8 @@ public class Carte {
         Object $img = this.getImg();
         result = result * PRIME + ($img == null ? 0 : $img.hashCode());
         return result;
-    }
+    }*/
 
 
-    public Carte(final int id, final String valeur, final String img) {
-        this.id = id;
-        this.valeur = valeur;
-        this.img = img;
-    }
-
-    public Carte() {
-    }
 
 }
