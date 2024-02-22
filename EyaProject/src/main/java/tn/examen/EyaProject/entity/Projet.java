@@ -22,7 +22,7 @@ import java.util.Set;
 public class Projet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String titre;
     private String objectif;
     private Date date_debut;
@@ -40,9 +40,12 @@ public class Projet {
     private List<Algorithme> algorithmes;
 
     ///relation avec equipe
-   /* @ManyToMany(mappedBy = "projets )
-    private Set<Equipe> equipes;*/
+    @ManyToMany(mappedBy = "projets" )
+    private Set<Equipe> equipes;
 
+    //relation avec sprint
+    @ManyToMany
+    private Set<Sprint> sprints;
 
 
     public boolean equals(final Object o) {
@@ -74,7 +77,7 @@ public class Projet {
     public int hashCode() {
         final int PRIME = 31; // Choose a prime number as the multiplier
         int result = 1;
-        result = result * PRIME + this.getId();
+        result = result * PRIME + (int) (this.getId() ^ (this.getId() >>> 32));
         Object $titre = this.getTitre();
         result = result * PRIME + ($titre == null ? 0 : $titre.hashCode());
         return result;

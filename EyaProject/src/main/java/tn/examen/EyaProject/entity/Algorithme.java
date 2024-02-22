@@ -1,6 +1,7 @@
 package tn.examen.EyaProject.entity;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,10 +11,11 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Algorithme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String nom;
 
     @ManyToMany(mappedBy = "algorithmes")
@@ -21,6 +23,7 @@ public class Algorithme {
     @ManyToMany(cascade = {CascadeType.ALL})
     private List<Carte> cartes;
 
+    /*
     public boolean equals(final Object o) {
         if (o == this) {
             return true;
@@ -56,6 +59,6 @@ public class Algorithme {
         result = result * PRIME + ($nom == null ? 0 : $nom.hashCode());
         return result;
     }
-
+*/
 
 }
